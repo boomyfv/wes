@@ -1,0 +1,64 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Hehe Hub",
+   LoadingTitle = "Hehe HubV1",
+   LoadingSubtitle = "By boomy",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = Hehe Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "QExdtpDVqA", -- The Discord invite code, do not include discord.gg/
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Hehe Hub",
+      Subtitle = "Key System",
+      Note = "Join the discord",
+      FileName = "Key",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "Hehe!!"
+   }
+})
+
+local MainTab = Window:CreateTab("Main", nil)
+local MainSection = MainTab:CreateSection("Main",true)
+
+Rayfield:Notify({
+	Title = "Injected.",
+	Content = "Hehe Hub",
+	Duration = 6.5,
+	Image = 4483362458,
+	Actions = { -- Notification Buttons
+		Ignore = {
+			Name = "Start",
+			Callback = function()
+				print("The user tapped Okay!")
+			end
+		},
+	},
+})
+
+
+local Button = MainTab:CreateButton({
+   Name = "Xlone {V1}",
+   Info = "Will Close the Main Script (might gotta rejoin).", 
+   Interact = 'Execute',
+   Callback = function()
+loadstring(game:httpget("https://raw.githubusercontent.com/1marhi/Project-1/main/xlone",true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Infinite Yield",
+   Info = "(May cause lag).", -- Speaks for itself, Remove if none.
+   Interact = 'Execute',
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end,
+})
